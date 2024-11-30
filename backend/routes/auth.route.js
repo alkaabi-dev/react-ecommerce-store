@@ -1,13 +1,13 @@
 import express from "express";
 // Alltid när jag importerar något från lokal file så måste jag lägga till .js i importen
-import { logIn, logOut, signUp } from "../controllers/auth.controller.js";
+import { login, logout, signup } from "../controllers/auth.controller.js";
 
 const router = express.Router();
 
-router.get("/signup", signUp);
+router.post("/signup", signup);
 
-router.get("/login", logIn);
+router.post("/login", login);
 
-router.get("/logout", logOut);
+router.post("/logout", logout);
 
 export default router;
